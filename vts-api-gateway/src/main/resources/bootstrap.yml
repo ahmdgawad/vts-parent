@@ -1,0 +1,8 @@
+spring:
+  profiles:
+    active: development
+  application:
+    name: vts-api-gateway
+  cloud:
+    config:
+      uri: http://localhost:5055

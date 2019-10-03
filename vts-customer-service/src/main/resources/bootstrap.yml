@@ -1,0 +1,12 @@
+spring:
+  profiles:
+    active: development
+  application:
+    name: vts-customer-service
+  cloud:
+    config:
+      uri: http://localhost:5055
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: myGroup

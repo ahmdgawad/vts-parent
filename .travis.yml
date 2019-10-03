@@ -1,0 +1,75 @@
+sudo: required
+
+services:
+  - docker
+
+language: java
+jdk: oraclejdk8
+
+env:
+  global:
+    - secure: "DrdePHkTj6mVqRAWl6w/P3PQ2A7S94xs7uP5IcZ7ePD4kzRd/xmvYXQBKIxHLHPVpzY1iN9Je7p5QTHV2PwYqKjzEgb8b6J/TcVFrirCgFzVl+2DwQkXD26QiFZsWPhF3fsPlyn1nT5ld4MkNrGb8AglO1zJuRmZYi4H8RB58trF+8ypNiioVJfURd8c/F9WGxansgSjL25pyNqg+H+yL6IELDw0Z0v06SxwcaQXbs9+NxtLj8ZDxSAFXVZL2fixMl7pXhlzLicIXf+oL1QAB21pjMBn/xfGf661XiMyqJy4XXU1cLWDuSUmee64PRM2Xm6q2PP5wsVTv1DBOnpJyWYevsR3ehgnQ7J7UhVcZ0719rZf/f12eI/7cfaGbldo1iBp6IesQU59NpOHVsqzV0YQKghDraKAwstf6Nh89hpJ6QhhlbekAGSL3o/ZqIBhd8zLUNazGnnvTefWcL2fXPqQBaARzjks/3zseZdpDAb+5gBfqTh3OIi/672zaSWKaPOzGnHjtiYbhyxnug2PxIGgmeHFAY1P2/pwaAe+2bdbuwg1fo5gAxZYLG6UF4kiu9TqfVG/w08WWzrf+hfqG8K3O8ogRtmXSD5dsRL2K35f9dL/UVy7eBSvnPBaVVx6VW5iOThxqaLIR3Wg2KLVgnpeLTs2vDFRFw3ZnT8/zsI=" # DOCKER_USER
+    - secure: "lra6NAj56ZMhXgd+D6ITnL485fmjSm9QM8xtvECxniLj2g34fJ6i+BwhCmAXZ8QQzlF2rSkbBr6uGOwWW2gdBgJ3pWKrDWjvd3W6eqhbWPbi+YN00Y0BFa0h4Ju0H2OPZ3yYnIyqVnA3kfxZP8cuaUUkSPdGYT3Es8jAfnAnctFiMdTCH9LXphjt9Ppy/MhLVQzqB/GklYFPp885t6Jn83IEdExgYPXVBP+5ffvFhZq/nj3sxdejkDOZr1OVzjbI/rJuCjr4KtXJVhVWZ3HdLQrltj2WAMVhFvQ78co1bwfYQ4OqE8TnwUKcUByVQBhUefZscsmyQNk/y5wAUfiBk613x9CNniv/6AQrP3pUnaWpcNBNXU1KNJdLLGGv5tx5FIMty4xPUUs3Uhn1Qg1Npv+WKtAJLZ78EXgQ7QPj0noVVvSmI8uZMQKem70xVd147BULYNtWL9jstcURmqWTo8qE/dug/u4YVtlX4zxPP6jKb2VCfppy/TK3vkOWAwLLZ4o2U9m9ha+o5fZAaFHmOQYNYLH4lPrsP8P0NmWhiE5w3bQQpryFHvG3ZINONGnrCtBThZWgMlMaVWlMm6kMQJsc2xpd1L2f39MEhvqmGrI/qYABFzEXO+zR3NoT8P4hr9XTZdd3rtJxnDpNxxUk+YlhMB/VurmPcNmE248akkc=" # DOCKER_PASS
+    - secure: "e3lB6UOUPXueHStNUGRAzr4nG9OmDTSzd9mDX4EzO49fnqZZh8IccHM+BECG/0wrcq/kKRITCBmjDKGQWF99ENepqmat5+LOFERNBEbnIf6Ur2RnD8ZL+fDB0urtlJpMvx6/3b12sVh8lPRRQchyVYAJ/5yD1recLGwwh3eRNkFeBkh7dw5/792o69MaAaHAVldROmhceV0nM9LBnXeYQJClyMf+XV1PrluymcJxMGNJNwWy6Dj49Ruz/HAh4lkAdxN6+ryXKeH8YfObRqZpM22f9bXtA/ibl6BMXs687XvGlAKHo69siLg/Q7Gll5o15Duh8oyDh0qjy2KWIl5G5Aem2HPlLKF6TQtdk4vk3lCTI6wIZgeiiiK0m3Lm8uFnRaNhYkY0NoZ/V4jzbDyvpzDtM1lywNWiaDR6DYQIrQAlUGE4/LHB4xOxA/K7N4g3+0rxu+SsM6/IAEghYChhAV9knSTsRhwO62uwrCvDKEB4qtjFtVTWKdkIFpk/xYpiMCc0hYABo/PO3VJJXs2nYQbm2deQyDzNMmknvxzrOmzQPEbxG+4bkG/DboVr88zAjESLAfpijkP9klo6wo81kBmMlqC/GyGCDHlNBpj6uT167WINsrmqn14eYNnhEpFxgKYlotDXUpOF1VJZGZcBg/pqA0ZoJ9FOJTVuxqrAeGk=" # $AWS_ACCESS_KEY
+    - secure: "pbP8Ew1CTo4Drg4XbgtcVxLoQ1PBUqcMShQrXZ8I2Wpg4UTOXTQBjTz/iq5kLptEvYpZzaHZXW6cuLYR0f3JAd52bSmaiTmX386f6yDn5Fqtqc9SkXOYFIR3Zg/dzr/yvFHNUftjJHo8kVfxl3kDED3JGUX1WxAUVibWYVvvo1NHDurfGrTJEl3/1wumTHr4a1u0rbZCi2nOszJDzaUTI3pkbvKjwihEVTUcE9ZyEY0xyNHqGgkw1RAf+timJGgyWqGAQXKeBMv4B03IWP7V6uQPF4k0u5LtVM7AGDV5mSGogwK+sIahRtB8y00X6jhxofU9isVEtvqTl4XV9ldwlWVTL0NaqJmd8YfUBza+tCvcGA27ZMYdszAVO8rIyZRkp86WktS2URcd+V1kL5XXxmcH4DLiTh2ETezh0tntJskixDvnuMkCp4qIapGthfYdrAcNvJ1Ri3bEaBIy8JpWE5Q79EJJa9JCEw1nQL5GzsHfkgparC1lSODjIcIbsBxzthKQwm3xPLjfAX7PQCl1Vgzq2t+TAA/Th+ExD1rnF7WWrHzQcVnGH35ego8908stxSPYCQ0b37CBupLtDll1SCI1KL3LqiiSpxHHYrVYtGuOk3yOSc8Qd5KeWoUo7Kg9Bp93z/aDsi51Zocs9eDwArMp60eZzznMGJHOwGUQQlg=" # AWS_SECRET_KEY
+
+addons:
+  sonarcloud:
+    organization: "vts-project"
+    token:
+      secure: "TpZiux8iwPkMMymAhhmifrQDW8QEAhg0DL8OqHt4+RZuc2PgFr2fPa+NNS2uz1MTPiJraOEKAAbYF8OtqzEHTKbZIqfQ2VqCtFjUzQq5Cn7hjFC9Qiz+mnV5dil/8f/IC02AU5blh+DRn0zDqtq4jARSR+fpKaK0/O9rfCcHe7mjIpyAQtX5NpXEaX2bqR48JgoDJb3kUdEzTH/GBcD9j2HPoLUolSIZI60woyXPVqd7FMgwaa8gqKnvyMsCb/W9jIVijj6tnndsDJ1vyiAPdbO5lWVeNk1mTWrO84OnxCGUJiW8du/Xi6UateQ30vdXH490VctPVsUWSb7/Vts2QVcrBDd3eRa0ODCpnSR6MwmP59hdrWuXAxDytABFtUFfMSihNBNVIIBtdCacgHU7h+RC8P4lJegqGBzUYFgF4stdm68foMyvbFP4TMEYwYxnAHWIyFJ2qeIC0j5iyNui8sFZ8fJA14OyHx1kxPJ7T3uvaYh6eer/IZzn+OwfBycL+owuPoCa3z3M2imjWnV2vPQJJvCf6tTfk+Mq15Sd3nQDiHBndtLiVFjhD95oT3u5qtWVpzGRnZSCav0Owifv4HnboQbKqy+2LrDEAIMDj1DPXes+Bm4GTL5dB91uAFzGwqIPUkocqrBUPj9NrCBFiHKRjzNvuC4TVZuK+huOvNQ="
+
+before_install:
+  - docker login -u $DOCKER_USER -p $DOCKER_PASS
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+
+script:
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=ahmdgawad_vts-project -q -B -V -Dmaven.test.skip
+  
+  # CONFIG SERVICE
+  - cd vts-configuration-server
+  - docker build -t $DOCKER_USER/vts-configuration-server .
+  - docker push $DOCKER_USER/vts-configuration-server
+
+  # GATEWAY
+  - cd ../vts-api-gateway
+  - docker build -t $DOCKER_USER/vts-api-gateway .
+  - docker push $DOCKER_USER/vts-api-gateway
+
+  # EUREKA
+  - cd ../vts-eureka-server
+  - docker build -t $DOCKER_USER/vts-eureka-server .
+  - docker push $DOCKER_USER/vts-eureka-server
+
+  # CUSTOMER_SERVICE
+  - cd ../vts-customer-service
+  - docker build -t $DOCKER_USER/vts-customer-service .
+  - docker push $DOCKER_USER/vts-customer-service
+
+  # VEHICLE_SERVICE
+  - cd ../vts-vehicle-service
+  - docker build -t $DOCKER_USER/vts-vehicle-service .
+  - docker push $DOCKER_USER/vts-vehicle-service
+
+  # TRACKING_UI
+  - cd ../vts-tracking-ui
+  - docker build -t $DOCKER_USER/vts-tracking-ui .
+  - docker push $DOCKER_USER/vts-tracking-ui
+  - cd ..
+
+deploy:
+  provider: elasticbeanstalk
+  skip_cleanup: true
+  region: us-east-2
+  app: vts-project
+  env: VtsProject-env-2
+  bucket_name: "vts-project"
+  bucket_path: "vts-project"
+  access_key_id: 
+    secure: "$AWS_ACCESS_KEY"
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"
+  on:
+    branch: master

@@ -1,0 +1,18 @@
+spring:
+  profiles:
+    active: development
+  application:
+    name: vts-eureka-server
+  cloud:
+    config:
+      uri: http://localhost:5055
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    server:
+      waitTimeInMsWhenSyncEmpty: 0
+  instance:
+    prefer-ip-address: true
+server:
+  port: 8761
