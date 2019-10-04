@@ -10,8 +10,7 @@
           "hostPort": 2181,
           "containerPort": 2181
         }
-      ],
-      "memory": 128
+      ]
     },
     {
       "name": "kafka",
