@@ -4,7 +4,7 @@
     {
       "name": "zookeeper",
       "image": "wurstmeister/zookeeper:3.4.6",
-      "essential": true,
+      "essential": false,
       "portMappings": [
         {
           "hostPort": 2181,
@@ -16,7 +16,7 @@
     {
       "name": "kafka",
       "image": "wurstmeister/kafka:2.12-2.1.0",
-      "essential": true,
+      "essential": false,
       "portMappings": [
         {
           "hostPort": 9092,
@@ -29,7 +29,7 @@
       "name": "vts-configuration-server",
       "image": "ahmedgawad2/vts-configuration-server",
       "hostname": "vts-configuration-server",
-      "essential": true,
+      "essential": false,
       "portMappings": [
         {
           "hostPort": 5055,
@@ -41,7 +41,7 @@
     {
       "name": "vts-eureka-server",
       "image": "ahmedgawad2/vts-eureka-server",
-      "essential": true,
+      "essential": false,
       "portMappings": [
         {
           "hostPort": 80,
@@ -54,7 +54,7 @@
     {
       "name": "vts-api-gateway",
       "image": "ahmedgawad2/vts-api-gateway",
-      "essential": true,
+      "essential": false,
       "portMappings": [
         {
           "hostPort": 5555,
@@ -67,7 +67,7 @@
     {
       "name": "vts-customer-service",
       "image": "ahmedgawad2/vts-customer-service",
-      "essential": true,
+      "essential": false,
       "portMappings": [
         {
           "hostPort": 9090,
@@ -80,7 +80,7 @@
     {
       "name": "vts-vehicle-service",
       "image": "ahmedgawad2/vts-vehicle-service",
-      "essential": true,
+      "essential": false,
       "portMappings": [
         {
           "hostPort": 9091,
@@ -93,7 +93,7 @@
     {
       "name": "vts-tracking-ui",
       "image": "ahmedgawad2/vts-tracking-ui",
-      "essential": true,
+      "essential": false,
       "portMappings": [
         {
           "hostPort": 9301,
