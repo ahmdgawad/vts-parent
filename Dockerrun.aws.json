@@ -6,14 +6,20 @@
       "image": "ahmedgawad2/vts-configuration-server",
       "hostname": "vts-configuration-server",
       "essential": false,
-      "memory": 128
+      "memory": 256
     },
     {
       "name": "vts-eureka-server",
       "image": "ahmedgawad2/vts-eureka-server",
-      "hostname": "vts-eureka-server",
-      "essential": false,
-      "memory": 128
+      "essential": true,
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 8761
+        }
+      ],
+      "links": ["vts-configuration-server"],
+      "memory": 256
     }
   ]
 }
