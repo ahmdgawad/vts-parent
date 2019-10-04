@@ -10,7 +10,8 @@
           "hostPort": 2181,
           "containerPort": 2181
         }
-      ]
+      ],
+      "memory": 512
     },
     {
       "name": "kafka",
@@ -21,7 +22,8 @@
           "hostPort": 9092,
           "containerPort": 9092
         }
-      ]
+      ],
+      "memory": 512
     },
     {
       "name": "vts-configuration-server",
@@ -32,7 +34,8 @@
           "hostPort": 5055,
           "containerPort": 5055
         }
-      ]
+      ],
+      "memory": 512
     },
     {
       "name": "vts-eureka-server",
@@ -44,7 +47,8 @@
           "containerPort": 8761
         }
       ],
-      "links": ["vts-configuration-server"]
+      "links": ["vts-configuration-server"],
+      "memory": 512
     },
     {
       "name": "vts-api-gateway",
@@ -56,7 +60,8 @@
           "containerPort": 5555
         }
       ],
-      "links": ["vts-configuration-server", "vts-eureka-server"]
+      "links": ["vts-configuration-server", "vts-eureka-server"],
+      "memory": 512
     },
     {
       "name": "vts-customer-service",
@@ -68,7 +73,8 @@
           "containerPort": 9090
         }
       ],
-      "links": ["vts-configuration-server", "vts-eureka-server"]
+      "links": ["vts-configuration-server", "vts-eureka-server"],
+      "memory": 512
     },
     {
       "name": "vts-vehicle-service",
@@ -80,7 +86,8 @@
           "containerPort": 9091
         }
       ],
-      "links": ["vts-configuration-server", "vts-eureka-server"]
+      "links": ["vts-configuration-server", "vts-eureka-server"],
+      "memory": 512
     },
     {
       "name": "vts-tracking-ui",
@@ -92,7 +99,8 @@
           "containerPort": 9301
         }
       ],
-      "links": ["vts-configuration-server", "vts-eureka-server"]
+      "links": ["vts-configuration-server", "vts-eureka-server"],
+      "memory": 512
     }
   ]
 }
