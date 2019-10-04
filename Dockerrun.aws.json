@@ -1,47 +1,19 @@
 {
-	"AWSEBDockerrunVersion": 2,
-	"containerDefinitions": [
-		{
-			"name": "vts-configuration-server",
-			"image": "ahmedgawad2/vts-configuration-server",
-			"hostname": "vts-configuration-server",
-			"essential": true,
-			"memory": 256,
-			"portMappings": [
-                {
-                    "hostPort": 5055,
-                    "containerPort": 5055
-                }
-            ]
-		},
-
-		{
-			"name": "vts-eureka-server",
-			"image": "ahmedgawad2/vts-eureka-server",
-			"hostname": "vts-eureka-server",
-			"essential": true,
-			"memory": 512,
-			"portMappings": [
-                {
-                    "hostPort": 8761,
-                    "containerPort": 8761
-                }
-            ]
-		},
-
-		{
-			"name": "vts-customer-service",
-			"image": "ahmedgawad2/vts-customer-service",
-			"hostname": "vts-customer-service",
-			"essential": false,
-			"memory": 512,
-			"portMappings": [
-                {
-                    "hostPort": 9090,
-                    "containerPort": 9090
-                }
-            ],            
-            "links": ["vts-configuration-server", "vts-eureka-server"]
-		}
-	]
+  "AWSEBDockerrunVersion": 2,
+  "containerDefinitions": [
+    {
+      "name": "vts-configuration-server",
+      "image": "ahmedgawad2/vts-configuration-server",
+      "hostname": "vts-configuration-server",
+      "essential": false,
+      "memory": 128
+    },
+    {
+      "name": "vts-eureka-server",
+      "image": "ahmedgawad2/vts-eureka-server",
+      "hostname": "vts-eureka-server",
+      "essential": false,
+      "memory": 128
+    }
+  ]
 }
