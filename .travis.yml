@@ -62,7 +62,7 @@ script:
 deploy:
   provider: elasticbeanstalk
   skip_cleanup: true
-  region: us-east-2
+  region: "us-east-2"
   app: "vts-project"
   env: "VtsProject-env"
   bucket_name: "elasticbeanstalk-us-east-2-169742384670"
