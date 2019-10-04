@@ -29,7 +29,13 @@
       "name": "vts-configuration-server",
       "image": "ahmedgawad2/vts-configuration-server",
       "hostname": "vts-configuration-server",
-      "essential": false,
+      "essential": true,
+      "portMappings": [
+        {
+          "hostPort": 5055,
+          "containerPort": 5055
+        }
+      ],
       "memory": 256
     },
     {
