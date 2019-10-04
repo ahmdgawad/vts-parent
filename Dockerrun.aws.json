@@ -2,6 +2,30 @@
   "AWSEBDockerrunVersion": 2,
   "containerDefinitions": [
     {
+      "name": "zookeeper",
+      "image": "wurstmeister/zookeeper:3.4.6",
+      "essential": true,
+      "portMappings": [
+        {
+          "hostPort": 2181,
+          "containerPort": 2181
+        }
+      ],
+      "memory": 256
+    },
+    {
+      "name": "kafka",
+      "image": "wurstmeister/kafka:2.12-2.1.0",
+      "essential": true,
+      "portMappings": [
+        {
+          "hostPort": 9092,
+          "containerPort": 9092
+        }
+      ],
+      "memory": 256
+    },
+    {
       "name": "vts-configuration-server",
       "image": "ahmedgawad2/vts-configuration-server",
       "hostname": "vts-configuration-server",
@@ -19,6 +43,58 @@
         }
       ],
       "links": ["vts-configuration-server"],
+      "memory": 256
+    },
+    {
+      "name": "vts-api-gateway",
+      "image": "ahmedgawad2/vts-api-gateway",
+      "essential": true,
+      "portMappings": [
+        {
+          "hostPort": 5555,
+          "containerPort": 5555
+        }
+      ],
+      "links": ["vts-configuration-server", "vts-eureka-server"],
+      "memory": 256
+    },
+    {
+      "name": "vts-customer-service",
+      "image": "ahmedgawad2/vts-customer-service",
+      "essential": true,
+      "portMappings": [
+        {
+          "hostPort": 9090,
+          "containerPort": 9090
+        }
+      ],
+      "links": ["vts-configuration-server", "vts-eureka-server"],
+      "memory": 256
+    },
+    {
+      "name": "vts-vehicle-service",
+      "image": "ahmedgawad2/vts-vehicle-service",
+      "essential": true,
+      "portMappings": [
+        {
+          "hostPort": 9091,
+          "containerPort": 9091
+        }
+      ],
+      "links": ["vts-configuration-server", "vts-eureka-server"],
+      "memory": 256
+    },
+    {
+      "name": "vts-tracking-ui",
+      "image": "ahmedgawad2/vts-tracking-ui",
+      "essential": true,
+      "portMappings": [
+        {
+          "hostPort": 9301,
+          "containerPort": 9301
+        }
+      ],
+      "links": ["vts-configuration-server", "vts-eureka-server"],
       "memory": 256
     }
   ]
