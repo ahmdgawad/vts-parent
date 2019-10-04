@@ -63,10 +63,10 @@ deploy:
   provider: elasticbeanstalk
   skip_cleanup: true
   region: us-east-2
-  app: "vts-project"
-  env: "VtsProject-env-2"
-  bucket_name: "vts-project"
-  bucket_path: "vts-project"
+  app: vts-project
+  env: VtsProject-env-2
+  bucket_name: vts-project
+  bucket_path: vts-project
   access_key_id: 
     secure: "$AWS_ACCESS_KEY"
   secret_access_key:
