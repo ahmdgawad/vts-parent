@@ -2,7 +2,7 @@
 	"AWSEBDockerrunVersion": 2,
 	"containerDefinitions": [
 		{
-			"name": "vts-config-server",
+			"name": "vts-configuration-server",
 			"image": "ahmedgawad2/vts-configuration-server",
 			"hostname": "vts-configuration-server",
 			"essential": true,
@@ -17,7 +17,7 @@
 
 		{
 			"name": "vts-eureka-server",
-			"image": "ahmedgawad2/vts-configuration-server",
+			"image": "ahmedgawad2/vts-eureka-server",
 			"hostname": "vts-eureka-server",
 			"essential": true,
 			"memory": 512,
