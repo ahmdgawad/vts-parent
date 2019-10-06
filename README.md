@@ -23,3 +23,4 @@ Technologies
 - Zookeeper
 - H2 Database
 - Docker Compose
+- Eureka
