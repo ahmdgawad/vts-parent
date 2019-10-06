@@ -8,7 +8,7 @@ spring:
     name: vts-simulator-service
   cloud:
     config:
-      uri: http://localhost:5055
+      enabled: false
 
 eureka:
   instance:
