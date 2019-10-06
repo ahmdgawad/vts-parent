@@ -9,6 +9,8 @@ spring:
   cloud:
     config:
       enabled: false
+  kafka:
+    enabled: false
   jpa:
     hibernate:
       ddl-auto: update
