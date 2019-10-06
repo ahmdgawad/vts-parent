@@ -33,7 +33,7 @@ public class VehicleResource {
 	private VehicleService vehicleService;
 
 	@ResponseStatus(HttpStatus.OK)
-	@GetMapping("/")
+	@GetMapping("/all")
 	public List<VehicleDTO> all() {
 		return vehicleService.all();
 	}

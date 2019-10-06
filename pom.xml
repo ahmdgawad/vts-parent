@@ -29,6 +29,7 @@
 		<module>vts-api-gateway</module>
 		<module>vts-configuration-server</module>
 		<module>vts-tracking-ui</module>
+		<module>vts-simulator-service</module>
 	</modules>
 
 	<dependencyManagement>

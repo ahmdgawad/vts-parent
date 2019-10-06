@@ -5,7 +5,7 @@
 	<artifactId>vts-customer-service</artifactId>
 	<name>vts-customer-service</name>
 	<description>Customer service for Vehicle Tracking System</description>
-	
+
 	<parent>
 		<groupId>com.alten.vts</groupId>
 		<artifactId>vts-parent</artifactId>

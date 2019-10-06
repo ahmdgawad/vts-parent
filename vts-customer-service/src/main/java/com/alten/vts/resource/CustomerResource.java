@@ -32,7 +32,7 @@ public class CustomerResource {
 	private CustomerService customerService;
 
 	@ResponseStatus(HttpStatus.OK)
-	@GetMapping("/")
+	@GetMapping("/all")
 	public List<CustomerDTO> all() {
 		return customerService.all();
 	}

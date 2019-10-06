@@ -9,7 +9,15 @@ import javax.validation.constraints.NotNull;
 @Entity
 @Table(name = "STATUS")
 public class Status {
-	
+
+	public Status() {
+	}
+
+	public Status(long id, String statusName) {
+		this.id = id;
+		this.statusName = statusName;
+	}
+
 	@Id
 	@GeneratedValue
 	private long id;

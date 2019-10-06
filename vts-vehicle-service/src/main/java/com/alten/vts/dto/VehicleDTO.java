@@ -9,8 +9,8 @@ public class VehicleDTO implements Serializable {
 	private String vin;
 	private String registrationNo;
 	private long custId;
-	private long statusId;
 	private Date lastUpdated;
+	private String status;
 	
 	public long getId() {
 		return id;
@@ -43,13 +43,13 @@ public class VehicleDTO implements Serializable {
 	public void setCustId(long custId) {
 		this.custId = custId;
 	}
-
-	public long getStatusId() {
-		return statusId;
+	
+	public String getStatus() {
+		return status;
 	}
 
-	public void setStatusId(long statusId) {
-		this.statusId = statusId;
+	public void setStatus(String status) {
+		this.status = status;
 	}
 
 	public Date getLastUpdated() {

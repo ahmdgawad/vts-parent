@@ -1,6 +1,7 @@
 package com.alten.vts.service;
 
-import org.springframework.hateoas.Resources;
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import com.alten.vts.dto.VehicleDTO;
@@ -9,7 +10,7 @@ import com.alten.vts.dto.VehicleDTO;
 public class VehicleServiceFallback implements VehicleService {
 	
     @Override
-    public Resources<VehicleDTO> findAll() {
+    public List<VehicleDTO> findAll() {
         return null;
     }
 

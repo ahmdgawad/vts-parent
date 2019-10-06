@@ -2,9 +2,12 @@ package com.alten.vts.datamodel;
 
 import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
@@ -25,7 +28,9 @@ public class Vehicle {
 	@NotNull
 	private long custId;
 	
-	private long statusId;
+    @OneToOne(cascade = CascadeType.MERGE)
+    @JoinColumn(name = "status_id")
+    private Status status;
 	
 	private Date lastUpdated;
 
@@ -61,12 +66,12 @@ public class Vehicle {
 		this.custId = custId;
 	}
 
-	public long getStatusId() {
-		return statusId;
+	public Status getStatus() {
+		return status;
 	}
 
-	public void setStatusId(long statusId) {
-		this.statusId = statusId;
+	public void setStatus(Status status) {
+		this.status = status;
 	}
 
 	public Date getLastUpdated() {
