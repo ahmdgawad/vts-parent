@@ -1,5 +1,5 @@
 
-[![Build Status](https://travis-ci.org/ahmdgawad/vts-project.svg?branch=master)](https://travis-ci.org/ahmdgawad/vts-project)
+[![Build Status](https://travis-ci.org/ahmdgawad/vts-parent.svg?branch=master)](https://travis-ci.org/ahmdgawad/vts-parent)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=ahmdgawad_vts-project&metric=coverage)](https://sonarcloud.io/dashboard?id=ahmdgawad_vts-project)
 [![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=ahmdgawad_vts-project&metric=ncloc)](https://sonarcloud.io/dashboard?id=ahmdgawad_vts-project)
 
@@ -23,3 +23,4 @@ Technologies
 - Zookeeper
 - H2 Database
 - Docker Compose
+- Eureka
