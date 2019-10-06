@@ -5,5 +5,21 @@
 
 # **Vehicle Tracking System Microservice Project**
 
-Microservice Kafka Sample
-==================
+This is a sample project to show microservices architecture for a vehicle tracking system.
+
+The project creates Docker containers.
+
+It uses two microservices:
+- Customer service to view and manage customers.
+- Vehicle Service to view and manage vehicle related to customers.
+
+The 2 services communicate using kafka message broker over topics to notify vehicle service about created customers.
+
+Technologies
+------------
+
+- Spring Boot
+- Kafka
+- Zookeeper
+- H2 Database
+- Docker Compose
