@@ -10,7 +10,11 @@ spring:
     config:
       enabled: false
   kafka:
-    enabled: false
+    topic:
+      name: myTopic
+    consumer:
+      bootstrap-servers: ${spring.embedded.kafka.brokers}
+      group-id: myGroup
   jpa:
     hibernate:
       ddl-auto: update
