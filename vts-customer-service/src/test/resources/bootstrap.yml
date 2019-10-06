@@ -10,20 +10,9 @@ spring:
     config:
       enabled: false
   kafka:
-    boot:
-      server: localhost:9092
-    topic:
-      name: myTopic
-    consumer:
-      group-id: myGroup
-
-eureka:
-  instance:
-    prefer-ip-address: true
-  client:
-    serviceUrl:
-      #defaultZone: http://vts-eureka-server:8761/eureka/
-      defaultZone: http://localhost:8761/eureka/
+    producer:
+      bootstrap-servers: ${spring.embedded.kafka.brokers}
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
 
 management:
   endpoints:
