@@ -1,0 +1,38 @@
+spring:
+  h2:
+    console:
+      enabled: true
+  profiles:
+    active: development
+  application:
+    name: vts-customer-service
+  cloud:
+    config:
+      uri: http://localhost:5055
+  kafka:
+    boot:
+      server: localhost:9092
+    topic:
+      name: myTopic
+    consumer:
+      group-id: myGroup
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      #defaultZone: http://vts-eureka-server:8761/eureka/
+      defaultZone: http://localhost:8761/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+server:
+  port: 9090
+
+db:
+  name: customerdb
