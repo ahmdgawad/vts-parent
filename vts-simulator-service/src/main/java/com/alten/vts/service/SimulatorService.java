@@ -1,6 +1,7 @@
 package com.alten.vts.service;
 
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 import java.util.Random;
 
@@ -31,6 +32,7 @@ public class SimulatorService {
             int randomIndex = random.nextInt(vehicleList.size());
             
             VehicleDTO vehicle = vehicleList.get(randomIndex);
+            vehicle.setLastUpdated(new Date());
             vehicle.setStatus(statusTypes.get(random.nextInt(statusTypes.size())));
             
             vehicleService.update(vehicle.getId(), vehicle);
