@@ -26,3 +26,6 @@ management:
         
 server:
   port: 9095
+  
+vehicle-service.name: vts-vehicle-service
+vehicle-service.url: http://localhost:9091
