@@ -9,9 +9,24 @@ This is a sample project to show microservices architecture for a vehicle tracki
 
 The project creates Docker containers.
 
-It uses two microservices:
+It uses two restful microservices:
 - Customer service to view and manage customers.
+
+Method	| Path	| Description
+------------- | ------------------------- | ------------- |
+GET	| /customers/all	| Get all customers data
+GET	| /customers/{1}	| Get specific customer data
+PUT	| /customers/{1}	| Save specific customer data
+POST	| /customers/	| Create new customer
+
 - Vehicle Service to view and manage vehicle related to customers.
+
+Method	| Path	| Description
+------------- | ------------------------- | ------------- |
+GET	| /vehicles/all	| Get all vehicles data
+GET	| /vehicles/{1}	| Get specific vehicle data
+PUT	| /vehicles/{1}	| Save specific vehicle data
+POST	| /vehicles/	| Create new vehicle
 
 The 2 services communicate using kafka message broker over topics to notify vehicle service about created customers.
 
@@ -24,3 +39,8 @@ Technologies
 - H2 Database
 - Docker Compose
 - Eureka
+
+#### Endpoints
+- http://localhost:5555 - API Gateway
+- http://localhost:8761 - Eureka
+- http://localhost:9301/ui/ - User Interface
