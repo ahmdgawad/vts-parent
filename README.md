@@ -30,6 +30,11 @@ POST	| /vehicles/	| Create new vehicle
 
 The 2 services communicate using kafka message broker over topics to notify vehicle service about created customers.
 
+Solution Architecture
+------------
+
+<img width="880" alt="Functional services" src="https://raw.githubusercontent.com/ahmdgawad/Vehicle-Tracking-System-Configuration/master/Architecture.png">
+
 Technologies
 ------------
 
