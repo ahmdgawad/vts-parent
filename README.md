@@ -40,7 +40,9 @@ Technologies
 - Docker Compose
 - Eureka
 
-#### Endpoints
+Technologies
+------------
+
 - http://localhost:5555 - API Gateway
 - http://localhost:8761 - Eureka
 - http://localhost:9301/ui/ - User Interface
