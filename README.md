@@ -13,13 +13,6 @@ It uses two restful microservices:
 - Customer service: to view and manage customers.
 - Vehicle Service: to view and manage vehicle related to customers.
 
-Method	| Path	| Description
-------------- | ------------------------- | ------------- |
-GET	| /vehicles/all	| Get all vehicles data
-GET	| /vehicles/{1}	| Get specific vehicle data
-PUT	| /vehicles/{1}	| Save specific vehicle data
-POST	| /vehicles/	| Create new vehicle
-
 The 2 services communicate using kafka message broker over topics to notify vehicle service about created customers.
 
 Solution Architecture
