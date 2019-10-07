@@ -7,6 +7,9 @@
 
 This is a sample project to show microservices architecture for a vehicle tracking system.
 
+<img width="880" alt="Screenshot" src="https://raw.githubusercontent.com/ahmdgawad/Vehicle-Tracking-System-Configuration/master/Screenshot.png">
+
+
 The project creates Docker containers.
 
 It uses two restful microservices:
