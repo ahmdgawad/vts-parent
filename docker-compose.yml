@@ -2,17 +2,20 @@ version: '2.1'
 services:
   zookeeper:
     image: wurstmeister/zookeeper:3.4.6
+    mem_limit: 134217728
   kafka:
     image: wurstmeister/kafka:2.12-2.1.0
     environment:
       KAFKA_ADVERTISED_HOST_NAME: kafka
       KAFKA_ADVERTISED_PORT: 9092
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+    mem_limit: 134217728
 
   vts-configuration-server:
     build: vts-configuration-server
     ports:
       - 5055:5055
+    mem_limit: 134217728
 
   vts-eureka-server:
     build: vts-eureka-server
@@ -20,6 +23,7 @@ services:
       - 8761:8761
     depends_on:
       - vts-configuration-server
+    mem_limit: 134217728
 
   vts-api-gateway:
     build: vts-api-gateway
@@ -27,6 +31,7 @@ services:
       - 5555:5555
     depends_on:
       - vts-eureka-server
+    mem_limit: 134217728
 
   vts-customer-service:
     build: vts-customer-service
@@ -34,6 +39,7 @@ services:
       - 9090:9090
     depends_on:
       - vts-eureka-server
+    mem_limit: 134217728
 
   vts-vehicle-service:
     build: vts-vehicle-service
@@ -43,6 +49,7 @@ services:
       - vts-eureka-server
     environment:
       SPRING_KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+    mem_limit: 134217728
       
   vts-tracking-ui:
     build: vts-tracking-ui
@@ -50,3 +57,4 @@ services:
       - 9301:9301
     depends_on:
       - vts-eureka-server
+    mem_limit: 134217728
