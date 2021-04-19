@@ -11,7 +11,7 @@
 	<name>vts-tracking-ui</name>
 
 	<properties>
-		<vaadin.version>12.0.4</vaadin.version>
+		<vaadin.version>14.4.10</vaadin.version>
 	</properties>
 
 	<dependencies>
